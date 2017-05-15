@@ -7,14 +7,17 @@
   		<div class="banner-title">哔哩哔哩 (゜-゜)つロ 干杯~</div>
       <search class="msearch"></search>
   	</div>
+    <BMenu></BMenu>
   </div>
 </template>
 
 <script>
-import Search from './Search.vue'
+import Search from './components/common/Search.vue'
+import BMenu from './BMenu'
 export default {
   components: {
-    Search
+    Search,
+    BMenu
   }
 }
 </script>
@@ -34,20 +37,20 @@ export default {
     	height 170px
     	z-index 10
     .h-center
-    	width 980px
-    	margin 0 auto
-    	position relative
-    	height 170px
-    	top -170px
-    	transition .2s height
-    	.logo
-    		position absolute
-    		width 220px
-    		height 105px
-    		left 24px
-    		top 55px
-    		background transparent no-repeat left center
-    		z-index 100
+      width 980px
+      height 170px
+      position absolute
+      top 0
+      left 50%
+      margin-left -490px
+      .logo
+        width 220px
+        position absolute
+        height 105px
+        left 24px
+        top 55px
+        background transparent no-repeat left center
+        z-index 100
     	.banner-title
     		position absolute
     		top 114px

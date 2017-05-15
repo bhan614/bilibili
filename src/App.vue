@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import TopContainer from './components/common/TopContainer.vue'
-import BHeader from './components/common/BHeader.vue'
+import TopContainer from './TopContainer.vue'
+import BHeader from './BHeader.vue'
 export default {
   name: 'app',
   components: {
@@ -19,7 +19,7 @@ export default {
 
 <style lang="stylus">
   #app
-    font-family "Microsoft YaHei",Arial,Helvetica,sans-serifsans-serif
+    font-family "Microsoft YaHei",Arial,Helvetica,sans-serif
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale
     font-size 12px

@@ -56,7 +56,7 @@
 </template>
 
 <script>
-import PostMaterial from './PostMaterial.vue'
+import PostMaterial from './components/common/PostMaterial.vue'
 export default {
   data() {
     return {
@@ -144,17 +144,13 @@ export default {
           float left
           height 42px
           font-size 12px
-          span
-            font-weight bold
-          a
-            font-weight bold
           li
             .new
               position absolute
               right -8px
               color #f25d8e
               top 13px
-              background url('../../assets/images/icons.png') no-repeat
+              background url('./assets/images/icons.png') no-repeat
               width 22px
               height 10px
               background-position -851px -412px
@@ -181,7 +177,7 @@ export default {
                 color #fff
               &.home
                 margin-left -10px
-                background-image url('../../assets/images/icons.png')
+                background-image url('./assets/images/icons.png')
                 background-repeat no-repeat
                 background-position -845px -74px
                 .i-link
@@ -220,7 +216,6 @@ export default {
                       display block
                       margin 0px
                       padding 0px
-                      font-weight 700
                   .s-line
                     display inline-block
                     border-left 1px solid #222
@@ -235,7 +230,7 @@ export default {
                     width 58px
                     position relative
                     z-index 100
-                    background url('../../assets/images/b-post.png') center center no-repeat
+                    background url('./assets/images/b-post.png') center center no-repeat
                     height 48px
                     border-radius 0 0 5px 5px
                     color #fff!important
