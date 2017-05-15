@@ -44,8 +44,8 @@
                 <span>注册</span>
               </a>
             </li>
-            <li class="u-i b-post">
-              <a class="i-link" href="http://member.bilibili.com/v/video/submit.html" target="_blank" @mouseenter="isShowPostMenu = !isShowPostMenu" @mouseleave="isShowPostMenu = !isShowPostMenu">投稿</a>
+            <li class="u-i b-post" @mouseenter="isShowPostMenu = !isShowPostMenu" @mouseleave="isShowPostMenu = !isShowPostMenu">
+              <a class="i-link" href="http://member.bilibili.com/v/video/submit.html" target="_blank">投稿</a>
               <PostMaterial v-show="isShowPostMenu"></PostMaterial>
             </li>
           </ul>
@@ -56,11 +56,15 @@
 </template>
 
 <script>
+import PostMaterial from './PostMaterial.vue'
 export default {
   data() {
     return {
       isShowPostMenu: false
     }
+  },
+  components: {
+    PostMaterial
   },
   methods: {
     showPostMenu() {
