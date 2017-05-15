@@ -1,23 +1,33 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
+    <TopContainer></TopContainer>
+    <BHeader></BHeader>
   </div>
 </template>
 
 <script>
+import TopContainer from './components/common/TopContainer.vue'
+import BHeader from './components/common/BHeader.vue'
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    TopContainer,
+    BHeader
+  }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="stylus">
+  #app
+    font-family "Microsoft YaHei",Arial,Helvetica,sans-serifsans-serif
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+    font-size 12px
+    margin 0
+    padding 0
+    background #fff
+    color #222
+    min-width 990px
+    tap-highlight-color transparent
+    -webkit-tap-highlight-color transparent
 </style>
