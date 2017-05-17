@@ -16,7 +16,7 @@
 		</div>
 		<!-- 直播 -->
 		<div class="container-row">
-
+			<BLive></BLive>
 		</div>
 		<!-- 各分类具体内容 -->
 		<div>
@@ -29,24 +29,41 @@
 import Banner from '../banner/Banner.vue'
 import BContentTop from './ContentTop.vue'
 import BPromote from '../promote/Promote.vue'
+import BLive from '../live/Live.vue'
 export default {
 	components: {
 		Banner,
 		BContentTop,
-		BPromote
+		BPromote,
+		BLive
 	}
 }
 </script>
 
 <style lang="stylus" scoped>
-	.content
+.content
 		zoom 1
+		.container-top-wrapper
+			&:after
+				content ''
+				display block
+				visibility hidden
+				height 0
+				clear both
+				font-size 0
 		.container-top
 			padding 0
 			margin-bottom 20px
 			margin 0 auto
 			zoom 1
 			width 980px
+			&:after
+				content ''
+				display block
+				visibility hidden
+				height 0
+				clear both
+				font-size 0
 			.b-l
 				float left
 				width 440px
@@ -58,4 +75,11 @@ export default {
 			margin 0 auto
 			zoom 1
 			width 980px
+			&:after
+				content ''
+				display block
+				visibility hidden
+				height 0
+				clear both
+				font-size 0
 </style>
