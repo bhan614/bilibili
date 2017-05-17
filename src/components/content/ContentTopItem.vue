@@ -30,12 +30,11 @@ export default {
 <style lang="stylus" scoped>
 .top-item
 	float left
-	width 120px
+	width 160px
 	margin-bottom 20px
-	margin-left 5px
-	margin-right 5px
+	margin-right 20px
 	.v-item
-		width 120px
+		width 160px
 		height 100px
 		position relative
 		.preview

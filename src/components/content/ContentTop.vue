@@ -28,8 +28,6 @@ export default {
 	},
 	mounted() {
 		this.$store.dispatch('ranklist')
-		// if (!this.ranklist || this.ranklist === []) {
-		// }
 	},
 	components: {
 		BContentTopItem
@@ -62,12 +60,12 @@ export default {
 			line-height 16px
 			user-select none
 		.prev
-			left 5px
+			left 0px
 			border-radius 0 2px 2px 0
 			background-position 6px -1211px
 			padding 13px 5px 13px 10px
 		.next
-			right 5px
+			right 0px
 			border-radius 2px 0 0 2px
 			background-position 25px -1262px
 			padding 13px 10px 13px 5px

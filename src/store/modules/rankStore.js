@@ -12,7 +12,6 @@ const getters = {
 
 const actions = {
 	ranklist({commit, state, rootState}) {
-
 		rootState.requesting = true
 		commit(TYPE.RANK_LIST_REQUEST)
 		rankApi.ranking3().then((response) => {
