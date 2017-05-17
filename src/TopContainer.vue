@@ -2,7 +2,7 @@
   <div class="top_container">
     <div class="z_top b-header-blur b-header-blur-black">
       <div class="b-header-mask-wrp">
-        <div class="b-header-mask-bg" style="background-image: url('//i0.hdslb.com/bfs/archive/4f59bf959d51592016e07efe62969c411288826a.png');"></div>
+        <div class="b-header-mask-bg" style="background-image: url('//i0.hdslb.com/bfs/archive/57c5ced363be9f08b4cacf1745e221d3bb99d7c5.png');"></div>
         <div class="b-header-mask"></div>
       </div>
       <div class="z_header">
