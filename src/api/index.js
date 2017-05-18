@@ -35,3 +35,24 @@ export const liveApi = {
 		})
 	}
 }
+//内容
+export const contentApi = {
+	content() {
+		return axios.get(url.content).then((response) => {
+			return response.data
+		})
+	}
+}
+//内容排行
+export const contentrankApi = {
+	contentrank(param) {
+		return axios.post(url.contentrank, param).then((response) => {
+			return response.data
+		})
+	},
+	contentrankweek(param) {
+		return axios.post(url.contentrankweek, param).then((response) => {
+			return response.data
+		})
+	}
+}

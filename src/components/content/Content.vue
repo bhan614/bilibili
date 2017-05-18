@@ -19,8 +19,8 @@
 			<BLive></BLive>
 		</div>
 		<!-- 各分类具体内容 -->
-		<div>
-
+		<div class="container-row" v-for = '(row, index) in rows' :key="index">
+			<BContentRow :category='sortKeys[index]' :categoryId="sortIds[index]" :row='row'></BContentRow>
 		</div>
 	</div>
 </template>
@@ -30,13 +30,33 @@ import Banner from '../banner/Banner.vue'
 import BContentTop from './ContentTop.vue'
 import BPromote from '../promote/Promote.vue'
 import BLive from '../live/Live.vue'
+import BContentRow from '../contentRow/ContentRow.vue'
+import { mapGetters } from 'vuex'
 export default {
+	data() {
+		return {
+			list: [0,1,1]
+		}
+	},
 	components: {
 		Banner,
 		BContentTop,
 		BPromote,
-		BLive
-	}
+		BLive,
+		BContentRow
+	},
+	computed: {
+		...mapGetters([
+			'requesting',
+			'error',
+			'rows',
+			'sortKeys',
+			'sortIds'
+		])
+ 	},
+ 	mounted() {
+ 		this.$store.dispatch('getContentRows')
+ 	},
 }
 </script>
 
@@ -53,8 +73,8 @@ export default {
 				font-size 0
 		.container-top
 			padding 0
-			margin-bottom 20px
 			margin 0 auto
+			margin-bottom 20px
 			zoom 1
 			width 980px
 			&:after
