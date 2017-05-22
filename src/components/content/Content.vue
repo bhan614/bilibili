@@ -15,12 +15,12 @@
 			<BPromote></BPromote>
 		</div>
 		<!-- 直播 -->
-		<div class="container-row">
+		<div class="container-row" id="b_live">
 			<BLive></BLive>
 		</div>
 		<!-- 各分类具体内容 -->
-		<div class="container-row" v-for = '(row, index) in rows' :key="index">
-			<BContentRow :category='sortKeys[index]' :categoryId="sortIds[index]" :row='row'></BContentRow>
+		<div class="container-row" v-for = '(row, index) in rows' :key="index" :id="row.b_id" v-if="rows">
+			<BContentRow :category='row.category' :categoryId="row.categoryId" :row='row.item'></BContentRow>
 		</div>
 	</div>
 </template>
@@ -33,11 +33,6 @@ import BLive from '../live/Live.vue'
 import BContentRow from '../contentRow/ContentRow.vue'
 import { mapGetters } from 'vuex'
 export default {
-	data() {
-		return {
-			list: [0,1,1]
-		}
-	},
 	components: {
 		Banner,
 		BContentTop,
@@ -45,18 +40,11 @@ export default {
 		BLive,
 		BContentRow
 	},
-	computed: {
-		...mapGetters([
-			'requesting',
-			'error',
-			'rows',
-			'sortKeys',
-			'sortIds'
-		])
- 	},
- 	mounted() {
- 		this.$store.dispatch('getContentRows')
- 	},
+	props: {
+		rows: {
+			type: Array
+		}
+	}
 }
 </script>
 

@@ -2,9 +2,9 @@
   <div id="app">
     <TopContainer></TopContainer>
     <BHeader></BHeader>
-    <BContent></BContent>
-    <BNavSide></BNavSide>
-    <!--<div class="wnd-mask" ref="mask"></div> -->
+    <BContent :rows="rows"></BContent>
+    <BNavSide :options="this.nav" v-on:change="isShowMask"></BNavSide>
+    <div class="wnd-mask" ref="mask" v-show="showMask"></div>
   </div>
 </template>
 
@@ -13,6 +13,7 @@ import TopContainer from './TopContainer.vue'
 import BHeader from './BHeader.vue'
 import BContent from './components/content/Content.vue'
 import BNavSide from './components/nav/NavSide.vue'
+import { mapGetters } from 'vuex'
 export default {
   name: 'app',
   components: {
@@ -20,6 +21,36 @@ export default {
     BHeader,
     BContent,
     BNavSide
+  },
+  data() {
+    return {
+      showMask: false,
+    }
+  },
+  mounted() {
+    //do something after mounting vue instance
+    this.$store.dispatch('getContentRows')
+  },
+  computed: {
+    ...mapGetters([
+      'requesting',
+      'error',
+      'rows',
+      'nav'
+    ]),
+    options() {
+      let options = {
+        offset: 150, //偏移的距离
+        items: this.rows,
+        offsetTop: 0 //距离顶部距离
+      }
+      return options
+    }
+  },
+  methods: {
+    isShowMask() {
+      this.showMask = !this.showMask
+    }
   }
 }
 </script>
@@ -43,7 +74,7 @@ export default {
       height 150%
       background-color #000
       opacity .5!important
-      z-index 10005
+      z-index 1000
       top 0px
       left 0px
       transition .2s
