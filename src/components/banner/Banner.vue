@@ -83,6 +83,9 @@ export default {
 		position relative
 		height 100%
 		width 100%
+		&:hover .more-topic
+			opacity 1
+			visibility visible
 		a
 			color #fff
 		.topic-preview-list-wrapper
@@ -104,6 +107,8 @@ export default {
 			text-align center
 			border-radius 4px
 			transition .2s all linear
+			visibility hidden
+			opacity 0
 			&:hover
 				text-shadow 0 0 3px #fff
 				color #fff

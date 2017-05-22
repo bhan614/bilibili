@@ -32,10 +32,10 @@
 				<div class="t">{{item.title}}</div>
 				<div class="i">
 					<span>
-						<i class="b-icon b-icon-v-play"></i>{{item.play}}
+						<i class="b-icon b-icon-v-play"></i>{{this.tofixed(item.stat.view)}}
 						</span><span>
 						<i class="b-icon b-icon-v-dm"></i>
-						{{item.video_review}}
+						{{this.tofixed(item.stat.danmaku)}}
 					</span>
 				</div>
 			</a>
@@ -54,6 +54,15 @@ export default {
 		hreflink() {
 			return 'http://www.bilibili.com/video/av' + this.item.aid
 		}
+	},
+	methods: {
+	  tofixed(num) {
+			if (num.toString().length < 5) {
+				return num
+			} else {
+				return (num / 10000).toFixed(1) + '万'
+			}
+	  }
 	}
 }
 </script>

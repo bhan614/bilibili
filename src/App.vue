@@ -3,6 +3,8 @@
     <TopContainer></TopContainer>
     <BHeader></BHeader>
     <BContent></BContent>
+    <BNavSide></BNavSide>
+    <!--<div class="wnd-mask" ref="mask"></div> -->
   </div>
 </template>
 
@@ -10,12 +12,14 @@
 import TopContainer from './TopContainer.vue'
 import BHeader from './BHeader.vue'
 import BContent from './components/content/Content.vue'
+import BNavSide from './components/nav/NavSide.vue'
 export default {
   name: 'app',
   components: {
     TopContainer,
     BHeader,
-    BContent
+    BContent,
+    BNavSide
   }
 }
 </script>
@@ -33,4 +37,14 @@ export default {
     min-width 990px
     tap-highlight-color transparent
     -webkit-tap-highlight-color transparent
+    .wnd-mask
+      position fixed
+      width 100%
+      height 150%
+      background-color #000
+      opacity .5!important
+      z-index 10005
+      top 0px
+      left 0px
+      transition .2s
 </style>
