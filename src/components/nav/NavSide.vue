@@ -21,11 +21,10 @@
 			<li v-if="isDrag && replaceItem === data.length" :class="['sortable-item']">
 				<div class="sortable-item-name"></div>
 			</li>
-
-			<div class="n-i customize" @click="sort">
+			<!--<div class="n-i customize" @click="sort">
 				<i class="n-icon-sort"></i>
 				<p>排序</p>
-			</div>
+			</div> -->
 		</div>
 		<div class="n-i gotop" >
 			<div class="s-line"></div>
@@ -167,7 +166,6 @@ export default {
 			}
 			clientTop = doc.clientTop || body.clientTop || 0
 			scrollTop = window.pageYOffset || doc.scrollTop
-      console.log(top, scrollTop, clientTop)
 			return (top + scrollTop - clientTop)
 		},
 		//进入排序模式

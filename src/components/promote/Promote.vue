@@ -1,5 +1,5 @@
 <template>
-	<div class="b_promote">
+	<div class="b_promote" v-loading="true">
 		<div class="b-l">
 			<div class="b-head">
 				<span class="b-head-i"></span>
