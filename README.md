@@ -32,10 +32,11 @@ b站首页的动画效果很多，包括很多hover效果和banner、tab的滚�
 3. 通过vue的transition组件也可以实现动画
 
 ## 导航栏
-在内容每个section都加上一个id，初始化是获取每部分到顶部距离offsettop = top + scrollTop - clientTop,滚动时将scrollTop和每部分的offsettop进行比较来设置当前状态。
-滚动时间可以用函数节流来优化
+在内容每个section都加上一个id，初始化时获取每部分到顶部距离offsettop = top + scrollTop - clientTop,滚动时将scrollTop和每部分的offsettop进行比较来设置当前状态。
+滚动事件可以用函数节流来优化。
 
 ## 项目展示
-
+### 首页整体
  <img src="./src/assets/images/show.png" align=center />
+### 内容部分
  <img src="./src/assets/images/music.png" align=center />
