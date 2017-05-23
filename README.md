@@ -36,7 +36,14 @@ b站首页的动画效果很多，包括很多hover效果和banner、tab的滚�
 滚动事件可以用函数节流来优化。
 
 ## 项目展示
-### 首页整体
+1. 首页整体
  <img src="./src/assets/images/show.png" align=center />
-### 内容部分
+
+2. 直播部分
+  <img src="./src/assets/images/live.png" align=center />
+
+3. 内容部分
  <img src="./src/assets/images/music.png" align=center />
+
+4. 侧边导航
+  <img src="./src/assets/images/nav.png" align=center />
